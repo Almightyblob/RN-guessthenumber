@@ -4,6 +4,7 @@ import GlobalStyles from '../constants/globalStyles'
 
 import NumberContainer from "../components/NumberContainer"
 import Card from "../components/Card"
+import TitleText from '../components/TitleText'
 
 const generateRandomBetween = (min, max, exclude) => {
     min = Math.ceil(min);
@@ -51,7 +52,7 @@ const GameScreen = props => {
 
     return(
         <View style={styles.screen}>
-            <Text style={styles.title}>Opponent's Guess</Text>
+            <TitleText>Opponent's Guess</TitleText>
             <NumberContainer>{currentGuess}</NumberContainer>
             <Card style={styles.buttonContainer}>
                 <Button title="LOWER" onPress={() => {nextGuessHandler('lower')}}/>
@@ -74,8 +75,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
         width: 300,
         maxWidth: "80%"
-    },
-    title: GlobalStyles.title
+    }
 })
 
 export default GameScreen
