@@ -40,7 +40,6 @@ let content = <StartGameScreen onStartGame={startGameHandler}/>
 
 if (userNumber && rounds <= 0) {
   content = <GameScreen userChoice={userNumber} onGameOver={gameOverHandler}/>
-  console.log(userNumber)
 } else if (rounds > 0) {
   content = <GameOverScreen numOfRounds={rounds} userNumber={userNumber} startNewGame={startNewGameHandler}/>
 }

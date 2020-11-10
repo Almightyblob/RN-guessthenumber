@@ -1,25 +1,12 @@
 import React from 'react';
-import {Text, View, StyleSheet, TouchableOpacity} from 'react-native'
+import {Text, StyleSheet} from 'react-native'
 
-const MainButton = props => {
-    return(
-        <TouchableOpacity onPress={() => {}}>
-            <View style={styles.button}>
-                <Text style={styles.buttonText}>
-                    {props.children}
-                </Text>
-            </View>
-        </TouchableOpacity>
-    )
-}
+const BodyText = props => <Text style={{...props.style, ...styles.body}}>{props.children}</Text>
 
 const styles = StyleSheet.create({
-    button: {
-
-    },
-    buttonText: {
-        
+    body: {
+        fontFamily: 'open-sans'
     }
 })
 
-export default MainButton
+export default BodyText
